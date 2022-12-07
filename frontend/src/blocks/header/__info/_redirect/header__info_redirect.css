@@ -1,0 +1,15 @@
+.header__info_redirect{
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #000;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #A9A9A9;
+}
+
+.header__info_redirect:hover{
+  opacity: 0.6;
+  cursor: pointer;
+}

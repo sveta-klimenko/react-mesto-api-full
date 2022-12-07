@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 880px;
+  border-bottom: 1px solid #545454;
+  margin: auto;
+  padding-top: 45px;
+  padding-bottom: 41px;
+}
+
+@media screen and (max-width: 425px) {
+  .header {
+    padding-top: 28px;
+    padding-bottom: 31px;
+  }
+}

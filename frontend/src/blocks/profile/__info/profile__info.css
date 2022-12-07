@@ -1,0 +1,15 @@
+.profile__info {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+@media screen and (max-width: 690px) {
+  .profile__info {
+    grid-template-columns: auto 25px;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    grid-template-areas: "icon icon"
+                         "id edit";
+  }
+}

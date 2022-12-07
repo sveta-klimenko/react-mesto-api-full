@@ -1,0 +1,15 @@
+.info-error_active {
+  position: absolute;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ff0000;
+  width: 358px;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 690px) {
+  .info-error_active {
+    width: 238px;
+  }
+}

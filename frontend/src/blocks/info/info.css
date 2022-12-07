@@ -1,0 +1,18 @@
+.info {
+  border: none;
+  border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+  width: 358px;
+  margin: auto;
+  padding-bottom: 13px;
+  min-height: 27px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: block;
+}
+
+@media screen and (max-width: 690px) {
+  .info {
+    width: 238px;
+  }
+}
