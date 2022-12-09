@@ -92,7 +92,7 @@ setToken(token) {
 }
 
 const api = new Api({
-  url: "http://localhost:3000",
+  url: "http://dogroseknight.back.nomoredomains.club",
   headers: {
     Authorization: "",
     "content-Type": "application/json",
