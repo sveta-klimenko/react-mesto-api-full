@@ -11,6 +11,8 @@ import {
 
 const conflictErrorCode = 11000;
 
+const { NODE_ENV, JWT_SECRET } = process.env;
+
 const messageNotFoundError = 'Пользователя с этими данными не существует';
 const messageBadRequestError = 'Введены некорректные данные';
 const messageConflictError = 'Пользователь с этим email уже зарегестрирован';
@@ -148,7 +150,7 @@ export const loginUser = (req, res, next) => {
   const { email, password } = req.body;
   return user.findUserByCredentials(email, password)
     .then((data) => {
-      const token = jwt.sign({ _id: data._id }, 'token-secret-salt', {
+      const token = jwt.sign({ _id: data._id }, NODE_ENV === 'production' ? JWT_SECRET : 'token-secret-salt', {
         expiresIn: '7d',
       });
       res.send({ token });
