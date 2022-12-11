@@ -11,7 +11,6 @@ function Main({
   onCardLike,
   onCardDelete,
 }) {
-  console.log('main cards ', cards)
   const currentUser = useContext(CurrentUserContext);
 
 

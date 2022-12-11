@@ -1,6 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
+import path from 'path';
 import { errors } from 'celebrate';
 import { constants } from 'http2';
 import { user } from './routes/users.js';
@@ -18,7 +20,14 @@ import { requestLogger, errorLogger } from './middlewares/logger.js';
 // Слушаем 3000 порт
 const { PORT = 3000 } = process.env;
 
+const config = dotenv.config({
+  path: path
+    .resolve('.env'),
+})
+  .parsed;
+
 const app = express();
+app.set('config', config);
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
