@@ -22,7 +22,7 @@ const { PORT = 3000 } = process.env;
 
 const config = dotenv.config({
   path: path
-    .resolve('.env'),
+    .resolve(process.env.NODE_ENV === 'production' ? '.env' : '.env.common'),
 })
   .parsed;
 
