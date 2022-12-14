@@ -149,6 +149,7 @@ export const loginUser = (req, res, next) => {
   return user.findUserByCredentials(email, password)
     .then((data) => {
       const { NODE_ENV, JWT_SECRET } = req.app.get('config');
+      console.log('node_env ', NODE_ENV);
       const token = jwt.sign({ _id: data._id }, NODE_ENV === 'production' ? JWT_SECRET : 'token-secret-salt', {
         expiresIn: '7d',
       });

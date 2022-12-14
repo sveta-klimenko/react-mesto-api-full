@@ -26,6 +26,7 @@ const config = dotenv.config({
 })
   .parsed;
 
+console.log('config ', config);
 const app = express();
 app.set('config', config);
 

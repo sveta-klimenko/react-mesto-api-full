@@ -91,8 +91,10 @@ setToken(token) {
 
 }
 
+const currentUrl = window.location.href; 
+
 const api = new Api({
-  url: "https://dogroseknight.back.nomoredomains.club",
+  url: currentUrl.includes('localhost') ? 'http://localhost:3000' : 'https://dogroseknight.back.nomoredomains.club',
   headers: {
     Authorization: "",
     "content-Type": "application/json",
